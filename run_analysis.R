@@ -107,16 +107,19 @@ run_analysis <- function(suppressRetrieveRawData = FALSE, outputNarrow = FALSE, 
     narrowData$variable <- gsub("bodybody", "body", narrowData$variable) #for some reason "bodybody" appears in the features
     narrowData$variable <- gsub("acc", "acceleration", narrowData$variable)
   }
+  #Attempt to product output of the specified significant figures (8)
   if (outputNarrow) {
     print("Creating tidy data in narrow (melted key-value) format")
-    tidyData <- ddply(narrowData, colnames(narrowData)[1:3], summarize, mean(value))
+    tidyData <- ddply(narrowData, colnames(narrowData)[1:3], summarize, 
+                      signif(mean(value), 8)) 
+    #inside ddply it couldn't see a variable I had defined outside, had to hard code 8 sig figs
   }
   else {
     print("Creating tidy data in wide (many columns) format")
-    tidyData <- dcast(narrowData, subjectid + activity ~ variable, mean)
+    tidyData <- dcast(narrowData, subjectid + activity ~ variable,
+                      function(df) signif(mean(df), 8))
   }
   tidyData
-  #idea: use format(x,scientific=TRUE) to match input files 
 }
 
 #Notes:

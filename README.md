@@ -1,18 +1,21 @@
 #Coursera Course Project "Getting and Cleaning Data"
 ##README.md
 ***
-###Source Citation
+###Source citation
 #####All referenced data is from the following publication:
 Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz.
 **Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine.**
 _International Workshop of Ambient Assisted Living (IWAAL 2012)_. Vitoria-Gasteiz, Spain. Dec 2012
 #####Source URL:
 <http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones>
+#####Direct data download URL
+Direct URL to project data, hosted on third party website:  
+<https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip>
 
 ###Document scope
 This document is not self contained and relies upon documents from the original source publication for the original study motivation, measurement techniques, and naming conventions. Readers seeking detail on the original publication should see the source citation.
 
-###Project Requirements
+###Project requirements
 Create one R script called run_analysis.R that does the following.
 
 1. Merges the training and the test sets to create one data set.
@@ -41,7 +44,7 @@ The author presumes the script will run on recent versions of R on other support
 
 Example: `run_analysis() -> myTidyData`.
 
-* Do not use any optional parameters with run_analysis() if your goal is to reproduce the format of tinydata.txt exactly. See the _run_analysis.R_ sourcecode for information on the optional parameters. Typical users will not need them.
+* Do not use any optional parameters with run_analysis() if your goal is to reproduce the format of tidydata.txt exactly. See the _run_analysis.R_ sourcecode for information on the optional parameters. Typical users will not need them.
 * To create the space separated text output file in your working directory, use `write.table(myTidyData, "tidydata.txt", col.names = TRUE)`.
 
 ####Notes
@@ -68,7 +71,7 @@ Upon executing `run_analysis()`:
 The numeric values in the output dataset have 8 significant digits where possible to match the numeric values in **./train/X_train.txt**.  
 - Sends the output dataset to the R console standard out.
 
-###R Sourcecode
+###R sourcecode
 * The complete R sourcecode to download and extract the data and complete all processing steps from the Project Requirements is included in this repo in run_analysis.R.  
 * Readers familiar with R may wish to review the sourcecode.
 * Code follows Google's R style guide except as required by the assignment parameters. For example, dataset (data.frame) feature names are lower case with no punctuation as suggested in class lectures, however other code variables are camel case.  

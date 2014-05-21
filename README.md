@@ -62,7 +62,7 @@ Upon executing `run_analysis()`:
 - Removes from the dataset any feature if the feature name does not contain the expression "mean" or "std" (standard deviation) as specified in the requirements.
 - Builds two new columns, adds them from the left as columns 1 & 2 of the dataset:  
    a. The subject identifier ("subjectid") by combining **./train/subject_train.txt** and **./test/subject_test.txt**  
-   - The activity description ("activity") by combining **./train/y_train.txt** and **./test/y_test.txt**, creating a list of numeric activity codes. Perform a numeric lookup in **./activity_labels.txt** to retrieve the text activity descriptions to populate this column.
+   b. The activity description ("activity") by combining **./train/y_train.txt** and **./test/y_test.txt**, creating a list of numeric activity codes. Perform a numeric lookup in **./activity_labels.txt** to retrieve the text activity descriptions to populate this column.
 - Clean the activity name and feature names. See **CodeBook.md**.
 - Create an output dataset taking the mean of each feature, grouped by each subject and each activity. That is, the script is taking the means of means and the means of standard deviations.
 The numeric values in the output dataset have 8 significant digits where possible to match the numeric values in **./train/X_train.txt**.  

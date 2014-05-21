@@ -43,7 +43,8 @@ Example: `run_analysis() -> myTidyData`.
 
 * Do not use any optional parameters with run_analysis() if your goal is to reproduce the format of tinydata.txt exactly. See the _run_analysis.R_ sourcecode for information on the optional parameters. Typical users will not need them.
 * To create the space separated text output file in your working directory, use `write.table(myTidyData, "tinydata.txt", col.names = TRUE)`.
-#####Notes
+
+####Notes
 To download and extract the data files but without running the analysis, run `RetrieveRawData()`. Executing `run_analysis()` later will not result in downloading the data set twice.
 
 ###R script run_analysis() conceptual summary

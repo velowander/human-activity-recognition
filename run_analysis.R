@@ -58,6 +58,7 @@ run_analysis <- function(suppressRetrieveRawData = FALSE, outputNarrow = FALSE, 
   require(reshape2)
   require(plyr)
   
+  # *** BEGIN NESTED FUNCTIONS ***
   BuildActivityColumn <- function(tidyActivityNames = TRUE) {
     #In: Optional tidyActivityNames: if TRUE converts output to lower case and removes underscores
     #  if FALSE outputs activity names directly from supplied activity_labels.txt
@@ -84,6 +85,7 @@ run_analysis <- function(suppressRetrieveRawData = FALSE, outputNarrow = FALSE, 
     rbind(read.table(paste0(dataPath, "/train/subject_train.txt")), read.table(paste0(dataPath, "/test/subject_test.txt"))
     )
   }
+  # *** END NESTED FUNCTIONS ***
   
   if (!suppressRetrieveRawData) RetrieveRawData()
   #Assumes the intact and unmodified "UCI HAR Dataset" is a subdirectory of the working directory

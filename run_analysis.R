@@ -108,6 +108,7 @@ run_analysis <- function(suppressRetrieveRawData = FALSE, outputNarrow = FALSE, 
     narrowData$variable <- gsub("-", "", narrowData$variable)
     narrowData$variable <- gsub("bodybody", "body", narrowData$variable) #for some reason "bodybody" appears in the features
     narrowData$variable <- gsub("acc", "acceleration", narrowData$variable)
+    narrowData$variable <- gsub("mag", "magnitude", narrowData$variable)
   }
   #Attempt to product output of the specified significant figures (8)
   if (outputNarrow) {
@@ -118,8 +119,7 @@ run_analysis <- function(suppressRetrieveRawData = FALSE, outputNarrow = FALSE, 
   }
   else {
     print("Creating tidy data in wide (many columns) format")
-    tidyData <- dcast(narrowData, subjectid + activity ~ variable,
-                      function(df) signif(mean(df), 8))
+    tidyData <- dcast(narrowData, subjectid + activity ~ variable, function(df) signif(mean(df), 8))
   }
   tidyData
 }

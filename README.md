@@ -24,6 +24,10 @@ Create one R script called run_analysis.R that does the following.
 - Appropriately labels the data set with descriptive activity names. 
 - Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
+The author notes that requirements 3 and 4 are extremely similar; this suggests to the author that the requirements, for whatever reason, do not adequately express the intended requirement parameters.
+
+As there was no way to clarify the requirements, the author relied on professional judgement.
+
 ###Files in this repo
 **README.md**: this file
 
@@ -62,7 +66,7 @@ Upon executing `run_analysis()`:
 1. The `RetrieveRawData()` function downloads and extracts the Human Activity Recognition (HAR) dataset if it is not already present in the working directory.
 - Combines the training and test data sets **./train/X_train.txt** and **./test/X_test.txt** together in that order, matching column for column. This dataset does not have column labels.
 - Lookup the numerically indexed feature names (column names) in **./features.txt** and label the dataset columns.
-- Removes from the dataset any feature if the feature name does not contain the expression "mean" or "std" (standard deviation) as specified in the requirements.
+- Subsets the features based on name; see **CodeBook.md**.
 - Builds two new columns, adds them from the left as columns 1 & 2 of the dataset:  
    a. The subject identifier ("subjectid") by combining **./train/subject_train.txt** and **./test/subject_test.txt**  
    b. The activity description ("activity") by combining **./train/y_train.txt** and **./test/y_test.txt**, creating a list of numeric activity codes. Perform a numeric lookup in **./activity_labels.txt** to retrieve the text activity descriptions to populate this column.

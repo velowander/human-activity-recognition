@@ -1,4 +1,4 @@
-#Coursera Course Project "Getting and Cleaning Data"
+#Cleaning Data project based on IWAAL 2012 study "Human Activity Recognition on Smartphones..."
 ##README.md
 ***
 ###Source citation

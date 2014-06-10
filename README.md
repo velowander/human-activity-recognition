@@ -16,7 +16,7 @@ Direct URL to project data, hosted on third party website:
 This document is not self contained and relies upon documents from the original source publication for the original study motivation, measurement techniques, and naming conventions. Readers seeking detail on the original publication should see the source citation.
 
 ###Project requirements
-Create one R script called run_analysis.R that does the following.
+Create one R script called human-activity-recognition.R that does the following.
 
 1. Merges the training and the test sets to create one data set.
 - Extracts only the measurements on the mean and standard deviation for each measurement. 
@@ -31,7 +31,7 @@ As there was no way to clarify the requirements, the author relied on profession
 ###Files in this repo
 **README.md**: this file
 
-**run_analysis.R**: the commented, R programming language source code to download, extract, and process the data
+**human-activity-recognition.R**: the commented, R programming language source code to download, extract, and process the data. The main function is `run_analysis()`.
 
 **CodeBook.md**: Documentation of the variables, data, and data cleaning or transformation steps undertaken to fulfill the Project Requirements
 

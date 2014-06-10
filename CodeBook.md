@@ -1,5 +1,4 @@
-#Coursera Course Project "Getting and Cleaning Data"
-##CodeBook.md
+##Human Activity Recognition - CodeBook.md
 ***
 ##Document scope
 This document describes the data tidying process including selecting features (columns) and renaming of features and activities.  
@@ -14,7 +13,7 @@ See **README.md**.
 As described in **README.md**, the random separation of 70% of the data into a machine learning training set, and 30% into a test set fulfilled the original publication's requirements but is not relevant for this project.  
 Re-combining the train and test datasets resulted in a table of 10,299 records and 561 features (columns).
 ###Subsetting features
-The R script run_analysis.R deliberately excluded some features, based on the project requirements. Any feature with a name including the expressions "mean" or "std" (standard deviation) was included in the working dataset, otherwise it was excluded.  
+The R script human-activity-recognition.R deliberately excluded some features, based on the project requirements. Any feature with a name including the expressions "mean" or "std" (standard deviation) was included in the working dataset, otherwise it was excluded.  
 This reduced the number of features from 561 to 79.
 ###On project requirement step 2 "measurements"
 Step 2 of the project requirements (see **README.md**) specifies extracting "measurements" from the data. Arguably, measurements would include only raw (time domain) force per unit mass readings from the smartphone accelerometer and would exclude any quantity derived or calculated from these readings, such as:
